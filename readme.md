@@ -1,32 +1,30 @@
-# 人脸聚类
+# Intelligent Gallery Album
 
-## 目录
-
-* [1. 介绍](#1)
-* [2. 安装](#2)
-  * [2.1 程序结构](#2.1)
-  * [2.2 安装依赖](#2.2)
-* [3. 快速开始](#3)
-  * [3.1 新建分组](#3.1)
-  * [3.2 导入图片](#3.2)
-  * [3.3 相册查看](#3.3)
-* [4. 下一步](#4)
+* [1. Introduce](#1)
+* [2. Install](#2)
+  * [2.1 Program](#2.1)
+  * [2.2 Requirements](#2.2)
+* [3. Quick Start](#3)
+  * [3.1 Add New Group](#3.1)
+  * [3.2 Upload Pictures](#3.2)
+  * [3.3 Show Labels](#3.3)
+* [4. Next](#4)
 
 <a name="1"></a>
 
-## 1. 介绍
-`人脸聚类`，实现对相片进行智能分类，将属于同一人的相片自动归为一组。
+## 1. Introduce
+Intelligently categorize photos, automatically group photos belonging to the same person.
 
-- 人脸识别：[insightface](https://github.com/deepinsight/insightface)
-- Web框架：[streamlit](https://github.com/streamlit/streamlit)
+- [insightface](https://github.com/deepinsight/insightface)
+- [streamlit](https://github.com/streamlit/streamlit)
 
 <a name="2"></a>
 
-## 2. 安装
+## 2. Install
 
 <a name="2.1"></a>
 
-### 2.1 程序结构
+### 2.1 Program
 
     |-- InsightFace-Face-Cluster
         |-- modules
@@ -44,7 +42,7 @@
 
 <a name="2.2"></a>
 
-### 2.2 安装依赖
+### 2.2 Requirements
 
 ```bash
 pip3 install --upgrade -r requirements.txt -i https://mirror.baidu.com/pypi/simple
@@ -52,7 +50,7 @@ pip3 install --upgrade -r requirements.txt -i https://mirror.baidu.com/pypi/simp
 
 <a name="3"></a>
 
-## 3. 快速开始
+## 3. Quick Start
 
 ```bash
 python3 -m streamlit run main.py 
@@ -60,21 +58,21 @@ python3 -m streamlit run main.py
 
 <a name="3.1"></a>
 
-### 3.1 新建分组
+### 3.1 Add New Group
 ![](./images/add_new_group.png)
 
 <a name="3.2"></a>
 
-### 3.2 导入图片
+### 3.2 Upload Pictures
 ![](./images/upload_pictures.png)
 
 <a name="3.3"></a>
 
-### 3.3 相册查看
+### 3.3 Show Labels
 ![](./images/show_pictures.png)
 
 <a name="4"></a>
 
-## 4. 下一步
+## 4. Next
 
-- 向量查询与检索：[milvus](https://github.com/milvus-io/milvus/)
+- Vector database built for scalable similarity search: [milvus](https://github.com/milvus-io/milvus/)
