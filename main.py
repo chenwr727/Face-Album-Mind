@@ -221,10 +221,12 @@ def show_labels_mode(group_id, lables):
     st.subheader("Select a label")
     options = []
     label_dict = {}
+    i = 0
     for i, row in enumerate(lables):
         options.append(row[0])
         label_dict[row[0]] = i
     not_label = "No one was found"
+    label_dict[not_label] = i + 1
     options.append(not_label)
     col1, col2 = st.columns([3, 2])
     if "label_id" not in st.session_state:
