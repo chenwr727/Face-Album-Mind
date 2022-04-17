@@ -15,6 +15,8 @@
 ## 1. Introduce
 Intelligently categorize photos, automatically group photos belonging to the same person.
 
+![](./images/demo.gif)
+
 - [insightface](https://github.com/deepinsight/insightface)
 - [streamlit](https://github.com/streamlit/streamlit)
 
