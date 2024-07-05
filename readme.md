@@ -1,19 +1,22 @@
-# Intelligent Gallery Album
+# Smart Album
 
-* [1. Introduce](#1)
-* [2. Install](#2)
-  * [2.1 Program](#2.1)
-  * [2.2 Requirements](#2.2)
-* [3. Quick Start](#3)
-  * [3.1 Add New Group](#3.1)
-  * [3.2 Upload Pictures](#3.2)
-  * [3.3 Show Labels](#3.3)
-* [4. Next](#4)
+* [1. 介绍](#1)
+* [2. 安装](#2)
+  * [2.1 程序](#2.1)
+  * [2.2 依赖](#2.2)
+* [3. 快速开始](#3)
+  * [3.1 新建相册](#3.1)
+  * [3.2 上传图片](#3.2)
+  * [3.3 自动归类](#3.3)
+* [4. 下一步](#4)
 
 <a name="1"></a>
 
-## 1. Introduce
-Intelligently categorize photos, automatically group photos belonging to the same person.
+## 1. 介绍
+将相册里的相片按人物进行归类：
+- 识别人脸；
+- 生成向量；
+- 人脸聚类；
 
 ![](./images/demo.gif)
 
@@ -22,11 +25,11 @@ Intelligently categorize photos, automatically group photos belonging to the sam
 
 <a name="2"></a>
 
-## 2. Install
+## 2. 安装
 
 <a name="2.1"></a>
 
-### 2.1 Program
+### 2.1 程序
 
     |-- InsightFace-Face-Cluster
         |-- modules
@@ -44,7 +47,7 @@ Intelligently categorize photos, automatically group photos belonging to the sam
 
 <a name="2.2"></a>
 
-### 2.2 Requirements
+### 2.2 依赖
 
 ```bash
 pip3 install --upgrade -r requirements.txt -i https://mirror.baidu.com/pypi/simple
@@ -52,7 +55,7 @@ pip3 install --upgrade -r requirements.txt -i https://mirror.baidu.com/pypi/simp
 
 <a name="3"></a>
 
-## 3. Quick Start
+## 3. 快速开始
 
 ```bash
 python3 -m streamlit run main.py 
@@ -60,21 +63,21 @@ python3 -m streamlit run main.py
 
 <a name="3.1"></a>
 
-### 3.1 Add New Group
+### 3.1 新建相册
 ![](./images/add_new_group.png)
 
 <a name="3.2"></a>
 
-### 3.2 Upload Pictures
+### 3.2 上传图片
 ![](./images/upload_pictures.png)
 
 <a name="3.3"></a>
 
-### 3.3 Show Labels
+### 3.3 自动归类
 ![](./images/show_pictures.png)
 
 <a name="4"></a>
 
-## 4. Next
+## 4. 下一步
 
-- Vector database built for scalable similarity search: [milvus](https://github.com/milvus-io/milvus/)
+- 向量搜索库: [milvus](https://github.com/milvus-io/milvus/)
