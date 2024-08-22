@@ -6,4 +6,4 @@ Pillow==10.3.0
 pydantic==1.10.13
 scikit_learn==1.0.2
 SQLAlchemy==1.4.35
-streamlit==1.30.0
+streamlit==1.37.0
