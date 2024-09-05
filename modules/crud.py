@@ -91,7 +91,8 @@ def get_picture_face_by_label_id(db: Session, label_id: int):
             models.Face.roll,
             models.Face.bbox,
         )
-        .join(models.Face, models.Face_Label)
+        .join(models.Face)
+        .join(models.Face_Label)
         .filter(models.Face_Label.label_id == label_id)
         .all()
     )
@@ -130,7 +131,9 @@ def get_embedding_label_by_group_id(db: Session, group_id: int):
         db.query(
             models.Face.embedding, models.Face_Label.label_id, models.Label.label_name
         )
-        .join(models.Picture, models.Face_Label, models.Label)
+        .join(models.Picture)
+        .join(models.Face_Label)
+        .join(models.Label)
         .filter(models.Picture.group_id == group_id)
     )
     for row in rows:

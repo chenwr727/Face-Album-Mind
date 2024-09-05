@@ -35,7 +35,7 @@ def draw_image_with_boxes(image, bbox, score, pitch, yaw, roll):
     font = ImageFont.truetype("./utils/msyh.ttc", font_size)
     text = "{:.3f},{:.0f},{:.0f},{:.0f}".format(score, pitch, yaw, roll)
     th = sum(font.getmetrics())
-    tw = max(font.getsize(text)[0] + 1, right - left)
+    tw = max(font.getbbox(text)[0] + 1, right - left)
     start_y = max(0, top - th)
     draw.rectangle([(left, start_y), (left + tw, start_y + th)], fill=color, width=2)
     draw.text((left + 1, start_y), text, fill=(255, 255, 255), font=font, anchor="la")

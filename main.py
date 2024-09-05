@@ -15,7 +15,7 @@ from utils.tools import (
 )
 
 models.Base.metadata.create_all(bind=database.engine)
-st.set_page_config(page_title="智能相册")
+st.set_page_config(page_title="FaceAlbumMind")
 
 
 def main():
@@ -103,7 +103,7 @@ def run_the_app(
 ):
     st.sidebar.markdown("# Upload")
     uploaded_files = st.sidebar.file_uploader(
-        "Upload a jpg file", type=["jpg"], accept_multiple_files=True
+        "Upload a image file", type=["jpg", "png"], accept_multiple_files=True
     )
     if st.sidebar.button("Upload"):
         if uploaded_files:
@@ -256,7 +256,7 @@ def show_labels_mode(group_id, lables):
             if new_name:
                 crud.update_label_name_by_label_id(db, label_id, new_name)
                 label_dict[new_name] = label_dict.pop(label_name)
-                raise st._RerunException(st._RerunData(""))
+                st.rerun()
         rows = crud.get_picture_face_by_label_id(db, label_id)
     else:
         rows = crud.get_picture_face_by_group_id(db, group_id)
@@ -331,14 +331,14 @@ def show_pictures(rows):
     progress_widget.empty()
 
 
-@st.experimental_singleton
+@st.cache_resource
 def load_app():
     app = FaceAnalysis(allowed_modules=["landmark_3d_68", "detection", "recognition"])
     app.prepare(ctx_id=0, det_size=(640, 480))
     return app
 
 
-@st.experimental_singleton
+@st.cache_resource
 def init_connection():
     return database.SessionLocal()
 
